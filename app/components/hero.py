@@ -17,16 +17,16 @@ def hero_section() -> rx.Component:
         rx.el.div(
             rx.el.div(
                 rx.image(
-                    src="/placeholder.svg",
+                    src="/yo.jpeg",
                     alt="Profile Picture",
                     class_name="size-40 md:size-48 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-6",
                 ),
                 rx.el.h1(
-                    "Your Name",
+                    "ADÁN MARCHENA",
                     class_name="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight text-center",
                 ),
                 rx.el.p(
-                    "Creative Developer & UI/UX Enthusiast",
+                    "Full Stack Developer & IU/UX Designer. Data Scientist",
                     class_name=f"mt-4 text-lg md:text-xl text-center font-medium",
                     color=SECONDARY_COLOR,
                 ),

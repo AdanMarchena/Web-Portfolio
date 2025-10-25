@@ -32,7 +32,7 @@ def about_section() -> rx.Component:
             rx.el.div(
                 rx.el.div(
                     rx.image(
-                        src="/placeholder.svg",
+                        src="/about-me.jpg",
                         alt="About Me Image",
                         class_name="rounded-2xl object-cover w-full h-full shadow-lg",
                     ),
@@ -45,9 +45,9 @@ def about_section() -> rx.Component:
                         color=SECONDARY_COLOR,
                     ),
                     rx.el.div(
-                        info_card("map_pin", "Location", "New York, USA"),
-                        info_card("mail", "Email", "your.email@example.com"),
-                        info_card("phone", "Phone", "+1 (234) 567-890"),
+                        info_card("map_pin", "Location", "Casa blanca, Molina, Chile"),
+                        info_card("mail", "Email", "adanmarchena.dev@gmail.com"),
+                        info_card("phone", "Phone", "+56 9 82808407"),
                         info_card("calendar", "Availability", "Open to Work"),
                         class_name="grid grid-cols-1 sm:grid-cols-2 gap-6",
                     ),

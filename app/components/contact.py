@@ -27,6 +27,33 @@ def contact_section() -> rx.Component:
                 "Get In Touch",
                 class_name="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center",
             ),
+            
+            # Mostrar mensaje de éxito
+            rx.cond(
+                State.form_success,
+                rx.el.div(
+                    rx.icon("check-circle", class_name="text-green-500 text-4xl mb-4 mx-auto"),
+                    rx.el.p(
+                        "¡Message sent successfully! I'll contact you soon.",
+                        class_name="text-green-700 text-lg text-center"
+                    ),
+                    class_name="bg-green-50 p-6 rounded-lg text-center mb-6"
+                ),
+            ),
+            
+            # Mostrar mensaje de error
+            rx.cond(
+                State.form_error,
+                rx.el.div(
+                    rx.icon("alert-circle", class_name="text-red-500 text-4xl mb-4 mx-auto"),
+                    rx.el.p(
+                        State.form_error,
+                        class_name="text-red-700 text-center"
+                    ),
+                    class_name="bg-red-50 p-4 rounded-lg mb-6 text-center"
+                ),
+            ),
+            
             rx.el.div(
                 rx.el.form(
                     form_field("Name", "name", "Your Name", "text", State.set_name),
@@ -54,7 +81,11 @@ def contact_section() -> rx.Component:
                     rx.el.button(
                         rx.cond(
                             State.form_is_loading,
-                            rx.icon("loader", class_name="animate-spin"),
+                            rx.el.div(  # ← Usar div nativo en lugar de chakra.stack
+                                rx.icon("loader", class_name="animate-spin"),
+                                "Sending...",
+                                class_name="flex items-center gap-2 justify-center"
+                            ),
                             "Send Message",
                         ),
                         type="submit",

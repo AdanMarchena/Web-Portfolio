@@ -11,6 +11,7 @@ def social_link(icon: str, href: str) -> rx.Component:
         ),
         href=href,
         is_external=True,
+        target="_blank",
     )
 
 
@@ -18,14 +19,14 @@ def footer_section() -> rx.Component:
     return rx.el.footer(
         rx.el.div(
             rx.el.div(
-                social_link("github", "https://github.com"),
-                social_link("linkedin", "https://linkedin.com"),
-                social_link("twitter", "https://twitter.com"),
-                social_link("mail", "mailto:your.email@example.com"),
+                social_link("github", "https://github.com/AdanMarchena"),
+                social_link("linkedin", "https://www.linkedin.com/in/ad%C3%A1n-marchena-romero-243826252/"),
+                social_link("twitter", "https://x.com/AdanMarchenaDev?t=VBt9esCPINwcDV5M4pcUkQ&s=09 "),
+                social_link("mail", "mailto:adanmarchena.dev@gmail.com"),
                 class_name="flex items-center gap-6 mb-4 md:mb-0",
             ),
             rx.el.p(
-                f"© 2024 Your Name. All Rights Reserved.",
+                f"© 2024 Adán Marchena. All Rights Reserved.",
                 class_name="text-sm",
                 color=SECONDARY_COLOR,
             ),

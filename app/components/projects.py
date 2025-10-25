@@ -63,7 +63,7 @@ def projects_section() -> rx.Component:
                 class_name="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center",
             ),
             rx.el.div(
-                rx.foreach(["All", "Web", "Mobile", "Design"], filter_button),
+                rx.foreach(["All", "Web", "Data Science", "Design"], filter_button),
                 class_name="flex justify-center gap-4 mb-12",
             ),
             rx.el.div(

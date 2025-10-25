@@ -35,7 +35,8 @@ def skills_section() -> rx.Component:
             ),
             rx.el.div(
                 skills_category("Technical Skills", State.technical_skills),
-                skills_category("Design Skills", State.design_skills),
+                skills_category("Data Science Skills", State.data_science_skills),
+                #skills_category("Design Skills", State.design_skills),
                 skills_category("Tools & Platforms", State.tools),
                 class_name="space-y-12",
             ),
