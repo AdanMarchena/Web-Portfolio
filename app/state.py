@@ -121,7 +121,7 @@ class State(rx.State):
                 return False
 
             # Crear mensaje
-            msg = MimeMultipart()
+            msg = MIMEMultipart()
             msg['From'] = email_user
             msg['To'] = email_user  # Lo recibes tú
             msg['Subject'] = f"📧 Nuevo mensaje de {self.name} - Portfolio"
@@ -140,7 +140,7 @@ class State(rx.State):
             🕐 Enviado automáticamente desde tu portfolio.
             """
             
-            msg.attach(MimeText(body, 'plain', 'utf-8'))
+            msg.attach(MIMEText(body, 'plain', 'utf-8'))
 
             # Enviar email
             with smtplib.SMTP(smtp_server, smtp_port) as server:

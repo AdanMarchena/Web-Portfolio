@@ -8,3 +8,5 @@ assets/external/
 venv-port/
 __pycache__/
 /app/__pycache__/
+assets/external/
+assets/
